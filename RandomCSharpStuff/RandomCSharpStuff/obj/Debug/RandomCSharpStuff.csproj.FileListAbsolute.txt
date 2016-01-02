@@ -4,3 +4,9 @@ C:\Users\Jim\Documents\Visual Studio 2013\Projects\RandomCSharpStuff\RandomCShar
 C:\Users\Jim\Documents\Visual Studio 2013\Projects\RandomCSharpStuff\RandomCSharpStuff\obj\Debug\RandomCSharpStuff.csprojResolveAssemblyReference.cache
 C:\Users\Jim\Documents\Visual Studio 2013\Projects\RandomCSharpStuff\RandomCSharpStuff\obj\Debug\RandomCSharpStuff.exe
 C:\Users\Jim\Documents\Visual Studio 2013\Projects\RandomCSharpStuff\RandomCSharpStuff\obj\Debug\RandomCSharpStuff.pdb
+C:\Users\Jim\Documents\GitHub\Random-Code\RandomCSharpStuff\RandomCSharpStuff\bin\Debug\RandomCSharpStuff.exe.config
+C:\Users\Jim\Documents\GitHub\Random-Code\RandomCSharpStuff\RandomCSharpStuff\obj\Debug\RandomCSharpStuff.exe
+C:\Users\Jim\Documents\GitHub\Random-Code\RandomCSharpStuff\RandomCSharpStuff\obj\Debug\RandomCSharpStuff.pdb
+C:\Users\Jim\Documents\GitHub\Random-Code\RandomCSharpStuff\RandomCSharpStuff\obj\Debug\RandomCSharpStuff.csprojResolveAssemblyReference.cache
+C:\Users\Jim\Documents\GitHub\Random-Code\RandomCSharpStuff\RandomCSharpStuff\bin\Debug\RandomCSharpStuff.exe
+C:\Users\Jim\Documents\GitHub\Random-Code\RandomCSharpStuff\RandomCSharpStuff\bin\Debug\RandomCSharpStuff.pdb
