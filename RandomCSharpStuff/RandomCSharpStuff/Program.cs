@@ -11,12 +11,20 @@ namespace RandomCSharpStuff
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            List<int> intList = new List<int>(){3,4,5,6,7,1,2};
-            Console.WriteLine(FindMin(intList));
-            
+            List<int> intList = new List<int>(){3,4,5,1,2};
+            Console.WriteLine("Min value in list: " + FindMin(intList));
+            var sorter = new Sorter();
+            var sortedList = sorter.MergeSort(intList);
+            foreach (var n in sortedList)
+            {
+                Console.WriteLine(n);
+            }
             Console.ReadKey();
         }
 
+        // Find minimum value in list given that list was previously sorted and then rotated
+        // (i.e. 1,2,3,4,5 is rotated to 3,4,5,1,2) and all values in list are unique integers
+        // (uses binary search modification)
         public static int FindMin(List<int> inputList)
         {
             if (inputList.Count == 1)
@@ -25,8 +33,8 @@ namespace RandomCSharpStuff
             }
             else
             {
-                int mid = 0;
-                int right = inputList[inputList.Count - 1];;
+                int mid;
+                int right = inputList[inputList.Count - 1];
                 if (inputList.Count%2 == 0)
                 {
                     mid = inputList[inputList.Count / 2 - 1];
