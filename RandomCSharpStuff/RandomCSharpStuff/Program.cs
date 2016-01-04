@@ -14,7 +14,10 @@ namespace RandomCSharpStuff
             List<int> intList = new List<int>(){3,4,5,1,2};
             Console.WriteLine("Min value in list: " + FindMin(intList));
             var sorter = new Sorter();
-            var sortedList = sorter.MergeSort(intList);
+            //var sortedList = sorter.MergeSort(intList);
+            sorter.QuickSort(intList, 0, intList.Count - 1);
+            var sortedList = intList;
+
             foreach (var n in sortedList)
             {
                 Console.WriteLine(n);
