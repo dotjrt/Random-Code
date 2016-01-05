@@ -10,3 +10,4 @@ C:\Users\Jim\Documents\GitHub\Random-Code\RandomCSharpStuff\RandomCSharpStuff\ob
 C:\Users\Jim\Documents\GitHub\Random-Code\RandomCSharpStuff\RandomCSharpStuff\obj\Debug\RandomCSharpStuff.csprojResolveAssemblyReference.cache
 C:\Users\Jim\Documents\GitHub\Random-Code\RandomCSharpStuff\RandomCSharpStuff\bin\Debug\RandomCSharpStuff.exe
 C:\Users\Jim\Documents\GitHub\Random-Code\RandomCSharpStuff\RandomCSharpStuff\bin\Debug\RandomCSharpStuff.pdb
+C:\Users\Jim\Documents\GitHub\Random-Code\RandomCSharpStuff\RandomCSharpStuff\bin\Debug\System.Device.Portable.dll
