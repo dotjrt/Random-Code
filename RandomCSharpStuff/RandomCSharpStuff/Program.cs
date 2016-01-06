@@ -14,6 +14,8 @@ namespace RandomCSharpStuff
         {
             Console.WriteLine("Hello World!");
             List<int> intList = new List<int>(){3,4,5,6,7,1,2};
+            List<int> orderedList = new List<int>() {0, 1, 2, 3, 4, 5, 6, 7};
+            Console.WriteLine("Binary search found key at: " + BinarySearch(orderedList, 4, 0, orderedList.Count - 1));
             Console.WriteLine("Min value in list: " + FindMin(intList));
             var sorter = new Sorter();
             //var sortedList = sorter.MergeSort(intList);
@@ -128,6 +130,31 @@ namespace RandomCSharpStuff
                 }
             }
         }
+
+        public static int BinarySearch(List<int> inputList, int key, int min, int max)
+        {
+            if (max < min)
+            {
+                return -1; // Key not found
+            }
+            else
+            {
+                var mid = (max + min)/2;
+
+                if (inputList[mid] > key)
+                {
+                    return BinarySearch(inputList, key, min, mid - 1);
+                }
+                if (inputList[mid] < key)
+                {
+                    return BinarySearch(inputList, key, mid + 1, max);
+                }
+                else
+                {
+                    return mid;
+                }
+            }
+        } 
 
         // LYFT programming challenge:
         // Calculate the detour distance between two different rides. Given four latitude / longitude pairs, 
