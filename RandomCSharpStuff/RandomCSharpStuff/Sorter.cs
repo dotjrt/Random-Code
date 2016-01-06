@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace RandomCSharpStuff
 {
@@ -49,24 +50,6 @@ namespace RandomCSharpStuff
             return Merge(list1, list2);
         }
 
-        private int Partition(List<int> inputList, int lo, int hi)
-        {
-            int pivot = inputList[hi];
-            int i = lo;
-
-            for (int j = lo; j < hi; j++)
-            {
-                if (inputList[j] <= pivot)
-                {
-                    inputList = Swap(inputList, i, j);
-                    i++;
-                }
-            }
-            
-            inputList = Swap(inputList, i, hi);
-            return i;
-        }
-
         public void QuickSort(List<int> inputList, int lo, int hi)
         {
             if (lo < hi)
@@ -76,14 +59,31 @@ namespace RandomCSharpStuff
                 QuickSort(inputList, p + 1, hi);
             }
         }
-        
-        private List<int> Swap(List<int> inputList, int i, int j)
+
+        private int Partition(List<int> inputList, int lo, int hi)
+        {
+            int pivot = inputList[hi];  
+            int i = lo;
+
+            for (int j = lo; j < hi; j++)
+            {
+                if (inputList[j] <= pivot)
+                {
+                    Swap(inputList, i, j);
+                    i++;
+                }
+            }
+
+            Swap(inputList, i, hi);
+            return i;
+        }
+
+        private void Swap(List<int> inputList, int i, int j)
         {
             var temp1 = inputList[i];
             var temp2 = inputList[j];
             inputList[j] = temp1;
             inputList[i] = temp2;
-            return inputList;
         }
     }
 }

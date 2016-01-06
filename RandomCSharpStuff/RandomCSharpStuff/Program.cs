@@ -13,7 +13,7 @@ namespace RandomCSharpStuff
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            List<int> intList = new List<int>(){3,4,5,1,2};
+            List<int> intList = new List<int>(){3,4,5,6,7,1,2};
             Console.WriteLine("Min value in list: " + FindMin(intList));
             var sorter = new Sorter();
             //var sortedList = sorter.MergeSort(intList);
@@ -29,12 +29,15 @@ namespace RandomCSharpStuff
 
             // Test BFS and DFS of tree graph
             Graph g = InitializeGraph();
+            g.Print();
             g.BreadthFirstSearch();
-            foreach (var node in g.Nodes){ node.Discovered = false; }
+            foreach (var node in g.Nodes){ node.Discovered = false; } // reset Discovered property for each node
             g.DepthFirstSearch();
             foreach (var node in g.Nodes) { node.Discovered = false; }
             Console.Write("Recursive DFS ordering: ");
             g.DfsRecursive(g.Root);
+            //
+
             Console.ReadKey();
         }
 

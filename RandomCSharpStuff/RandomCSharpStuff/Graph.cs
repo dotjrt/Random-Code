@@ -15,6 +15,7 @@ namespace RandomCSharpStuff
 
         public void Print()
         {
+            Console.WriteLine("Printing graph nodes and adjacent nodes:");
             foreach (var node in Nodes)
             {
                 Console.Write("{0} - ", node.Data);
