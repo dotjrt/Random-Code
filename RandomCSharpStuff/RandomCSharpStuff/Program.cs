@@ -15,8 +15,12 @@ namespace RandomCSharpStuff
             Console.WriteLine("Hello World!");
             List<int> intList = new List<int>(){3,4,5,6,7,1,2};
             List<int> orderedList = new List<int>() {0, 1, 2, 3, 4, 5, 6, 7};
-            Console.WriteLine("Binary search found key at: " + BinarySearch(orderedList, 4, 0, orderedList.Count - 1));
+
+            var searchKey = 4;
+            Console.WriteLine("Binary search found key {0} at index: {1}", 
+                searchKey, BinarySearch(orderedList, searchKey, 0, orderedList.Count - 1));
             Console.WriteLine("Min value in list: " + FindMin(intList));
+            
             var sorter = new Sorter();
             //var sortedList = sorter.MergeSort(intList);
             sorter.QuickSort(intList, 0, intList.Count - 1);
@@ -39,8 +43,21 @@ namespace RandomCSharpStuff
             Console.Write("Recursive DFS ordering: ");
             g.DfsRecursive(g.Root);
             //
+            Console.WriteLine();
+            BuildBinarySearchTree();
 
             Console.ReadKey();
+        }
+
+        private static void BuildBinarySearchTree()
+        {
+            var bst = new BinarySearchTree();
+            var root = new BstLeaf(10);
+
+            bst.Insert(root, 1);
+            bst.Insert(root, 19);
+
+            bst.Traverse(root);
         }
 
         private static Graph InitializeGraph()
@@ -142,11 +159,11 @@ namespace RandomCSharpStuff
                 var mid = (max + min)/2;
 
                 if (inputList[mid] > key)
-                {
+                {   // Key is in the "lower" half of list 
                     return BinarySearch(inputList, key, min, mid - 1);
                 }
                 if (inputList[mid] < key)
-                {
+                {   // Key is in the "upper" half of list
                     return BinarySearch(inputList, key, mid + 1, max);
                 }
                 else
