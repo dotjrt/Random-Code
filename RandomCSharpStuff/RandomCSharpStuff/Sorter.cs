@@ -62,12 +62,15 @@ namespace RandomCSharpStuff
 
         private int Partition(List<int> inputList, int lo, int hi)
         {
-            int pivot = inputList[hi];  
+            Random random = new Random(); 
+            var pivotIndex = random.Next(lo, hi + 1);
+            Swap(inputList, pivotIndex, hi);
+            int pivotValue = inputList[hi];  
             int i = lo;
 
             for (int j = lo; j < hi; j++)
             {
-                if (inputList[j] <= pivot)
+                if (inputList[j] <= pivotValue)
                 {
                     Swap(inputList, i, j);
                     i++;
