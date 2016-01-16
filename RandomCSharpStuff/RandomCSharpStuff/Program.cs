@@ -13,8 +13,8 @@ namespace RandomCSharpStuff
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            List<int> intList = new List<int>(){9,3,4,8,10,5,6,7,1,2};
-            List<int> orderedList = new List<int>() {0, 1, 2, 3, 4, 5, 6, 7};
+            List<int> intList = new List<int>(){3,4,5,6,7,1,2};
+            List<int> orderedList = new List<int>(){0,1,2,3,4,5,6,7};
 
             var searchKey = 4;
             Console.WriteLine("Binary search found key {0} at index: {1}", 

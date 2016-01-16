@@ -14,21 +14,18 @@ namespace RandomCSharpStuff
                 {
                     root.Left = new BstLeaf(key);
                 }
-
                 else
                 {
                     root = root.Left;
                     Insert(root, key);
-
                 }
             }
-            else if (key > root.Key)
+            else
             {
                 if (root.Right == null)
                 {
                     root.Right = new BstLeaf(key);
                 }
-
                 else
                 {
                     root = root.Right;
@@ -45,8 +42,8 @@ namespace RandomCSharpStuff
             }
             
             Console.WriteLine(root.Key);
-            Traverse(root.Right);
             Traverse(root.Left);
+            Traverse(root.Right); 
         }
     }
 }
